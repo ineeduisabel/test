@@ -1,0 +1,46 @@
+
+	<div style="height:150px;" >
+	<div id="circles">
+	</div>
+	<script>
+	$('#circles').GPlusCircle({id: 'circle1', text: '終身學習'})
+	$('#circles').GPlusCircle({id: 'circle2', text: '企業訓練'});
+	$('#circles').GPlusCircle({id: 'circle3', text: '顧問團隊'});
+	$('#circles').GPlusCircle({id: 'circle4', text: '策略聯盟'});
+	</script>
+	</div>
+<div id="page_maintext">	
+	<div id="page_content" style="margin-top: 0px; background-color: #ffffff; color:#333333">
+<table class="data display datatable" id="example">
+		<thead>
+			<tr>
+				<th>課程名稱</th>
+				<th>課程敘述</th>
+				<th>講師</th>
+				<th>報名日期</th>
+				<th>上課日期</th>
+
+				<th></th>
+
+			</tr>
+		</thead>
+		<tbody>
+			<% @lessons.each do |lesson| %>
+			<tr class="odd gradeX">
+				<td align="center"><%= lesson.title %></td>
+				<td><%= lesson.description %></td>
+				<td align="center"><%= lesson.consultant_id %></td>
+				<td align="center"><%= lesson.singtime %></td>
+				<td align="center"><%= lesson.classtime %></td>
+
+				<td><%= link_to '查看', lesson %></td>
+			</tr>
+			<% end %>
+		</tbody>
+	</table>
+
+	</div>
+</div>
+
+
+

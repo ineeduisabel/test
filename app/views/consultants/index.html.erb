@@ -1,0 +1,47 @@
+<h1>講師資料</h1>
+
+<table>
+  <tr>
+    <th>照片</th>
+    <th>名字</th>
+    <th>性別</th>
+    <th>公司</th>
+    <th>職位</th>
+    <th>生日</th>
+    <th>電話</th>
+    <th>Email</th>
+    <th>地址</th>
+    <th>個人簡介</th>
+    <th>專業</th>
+    <th>教學經歷</th>
+    <th>出版物</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @consultants.each do |consultant| %>
+  <tr>
+    <td><%= consultant.photo_id %></td>
+    <td><%= consultant.name %></td>
+    <td><%= consultant.sex %></td>
+    <td><%= consultant.company %></td>
+    <td><%= consultant.position %></td>
+    <td><%= consultant.birthday %></td>
+    <td><%= consultant.phone %></td>
+    <td><%= consultant.email %></td>
+    <td><%= consultant.address %></td>
+    <td><%= consultant.profile %></td>
+    <td><%= consultant.profession %></td>
+    <td><%= consultant.histroy_lesson %></td>
+    <td><%= consultant.publish %></td>
+    <td><%= link_to '檢視', consultant %></td>
+    <td><%= link_to '編輯', edit_consultant_path(consultant) %></td>
+    <td><%= link_to '刪除', consultant, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to '新增講師', new_consultant_path %>

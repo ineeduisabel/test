@@ -1,0 +1,40 @@
+<h2>課程瀏覽</h2>
+<div class="block">
+
+	<table class="data display datatable" id="example">
+		<thead>
+			<tr>
+				<th>課程名稱</th>
+				<th>課程分類</th>
+				<th>課程敘述</th>
+				<th>講師</th>
+				<th>報名日期</th>
+				<th>上課日期</th>
+				<th>上課地點</th>
+				<th></th>
+				<th></th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			<% @lessons.each do |lesson| %>
+			<tr class="odd gradeX">
+				<td align="center"><%= lesson.title %></td>
+				<td align="center"><%= lesson.lessoncate_id %></td>
+				<td><%= lesson.description %></td>
+				<td align="center"><%= lesson.consultant_id %></td>
+				<td align="center"><%= lesson.singtime %></td>
+				<td align="center"><%= lesson.classtime %></td>
+				<td align="center"><%= lesson.place %></td>
+				<td><%= link_to '查看', lesson %></td>
+				<td><%= link_to '編輯', edit_lesson_path(lesson) %></td>
+				<td><%= link_to '刪除', lesson, method: :delete, data: { confirm: '你確定嗎?' } %></td>
+			</tr>
+			<% end %>
+		</tbody>
+	</table>
+
+	<br />
+
+	<%= link_to '新增課程', new_lesson_path %>
+</div>

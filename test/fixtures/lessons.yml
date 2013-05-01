@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  lessoncate_id: 1
+  title: MyString
+  description: MyString
+  string: MyString
+  content: MyString
+  singtime: 2013-04-19
+  classtime: 2013-04-19
+  place: MyString
+  lessonhour: MyString
+  consultant_id: 1
+
+two:
+  lessoncate_id: 1
+  title: MyString
+  description: MyString
+  string: MyString
+  content: MyString
+  singtime: 2013-04-19
+  classtime: 2013-04-19
+  place: MyString
+  lessonhour: MyString
+  consultant_id: 1

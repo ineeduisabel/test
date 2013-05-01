@@ -1,0 +1,70 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Photo:</b>
+  <%= @consultant.photo_id %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @consultant.name %>
+</p>
+
+<p>
+  <b>Sex:</b>
+  <%= @consultant.sex %>
+</p>
+
+<p>
+  <b>Company:</b>
+  <%= @consultant.company %>
+</p>
+
+<p>
+  <b>Position:</b>
+  <%= @consultant.position %>
+</p>
+
+<p>
+  <b>Birthday:</b>
+  <%= @consultant.birthday %>
+</p>
+
+<p>
+  <b>Phone:</b>
+  <%= @consultant.phone %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @consultant.email %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= @consultant.address %>
+</p>
+
+<p>
+  <b>Profile:</b>
+  <%= @consultant.profile %>
+</p>
+
+<p>
+  <b>Profession:</b>
+  <%= @consultant.profession %>
+</p>
+
+<p>
+  <b>Histroy lesson:</b>
+  <%= @consultant.histroy_lesson %>
+</p>
+
+<p>
+  <b>Publish:</b>
+  <%= @consultant.publish %>
+</p>
+
+
+<%= link_to 'Edit', edit_consultant_path(@consultant) %> |
+<%= link_to 'Back', consultants_path %>

@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<title>後台管理</title>
+		<%= stylesheet_link_tag    "admin", :media => "all" %>
+		<%= javascript_include_tag "admin" %>
+
+		<script type="text/javascript">
+			$(document).ready(function() {
+				setupDashboardChart('chart1');
+				setupLeftMenu();
+				setSidebarHeight();
+
+			});
+		</script>
+	</head>
+	<body>
+		<div class="container_12">
+			<%= render :partial => 'common/admin_menu'%>
+			<div class="clear"></div>
+			<div class="grid_2">
+				<%= render :partial => 'common/admin_sidebar'%>
+			</div>
+			<div class="grid_10">
+				<div class="box round first">
+					<p class="notice">
+						<%= notice %>
+					</p>
+					<p class="alert">
+						<%= alert %>
+					</p>
+
+					<%= yield %>
+
+				</div>
+			</div>
+
+			<div class="clear"></div>
+		</div>
+		<div class="clear"></div>
+		<div id="site_info">
+			<p>
+				Copyright <a href="http://www.playplus.com.tw">Play+Plus</a>. All Rights Reserved.
+			</p>
+		</div>
+	</body>
+</html>

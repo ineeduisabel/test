@@ -1,0 +1,55 @@
+	<div class="block">
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Lessoncate:</b>
+  <%= @lesson.lessoncate_id %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%= @lesson.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @lesson.description %>
+</p>
+
+<p>
+  <b>String:</b>
+  <%= @lesson.string %>
+</p>
+
+<p>
+  <b>Content:</b>
+  <%= @lesson.content %>
+</p>
+
+<p>
+  <b>Singtime:</b>
+  <%= @lesson.singtime %>
+</p>
+
+<p>
+  <b>Classtime:</b>
+  <%= @lesson.classtime %>
+</p>
+
+<p>
+  <b>Place:</b>
+  <%= @lesson.place %>
+</p>
+
+<p>
+  <b>Lessonhour:</b>
+  <%= @lesson.lessonhour %>
+</p>
+
+
+
+
+<%= link_to '編輯', edit_lesson_path(@lesson) %> |
+<%= link_to '返回上一頁', lessons_path %>
+
+</div>

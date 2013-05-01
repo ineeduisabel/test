@@ -1,0 +1,429 @@
+@charset "utf-8";
+/* Reset browser defaults */
+body, div, ul, li, table, fieldset, form, label {
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+html {
+	height: 100%;
+	width: 100%;
+}
+
+/* Page styles and classes */
+body {
+	font-family: "微軟正黑體", "Microsoft JhengHei", sans-serif; Arial, Helvetica, sans-serif;
+	font-size: 100%;
+	color: #000;
+	height: 100%;
+	width: 100%; 	
+}
+
+ul.list{
+    margin: 0 0 0 50px; 
+	line-height:150%;
+}
+
+div.circle {
+    margin: 50px 20px 0 20px; 
+    width:200px;
+    height:160px;
+	float:left;
+}
+div.outer-circle {
+ 
+    /* Set the background and position */
+ 
+    background:transparent;
+    width:122px;
+    height:122px;
+ 
+    /* Set the border and the
+    border radius to be exactly
+    half the width and height
+    so that it looks like a circle */
+ 
+    -webkit-border-radius: 61px;
+    -moz-border-radius: 61px;
+    border-radius: 61px;
+    border:1px solid #aaaaaa;
+ 
+    /* You will need to use
+    position:absolute so that
+    the circles can appear on top of
+    each other.
+ 
+    Additionally, the z-index will
+    be used to determine which DIV
+    should appear lowest or highest */
+ 
+    position:absolute;
+    z-index:800;
+ 
+    /* Finally, we set the transition so
+    that the circle grows with an
+    animation */
+ 
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+ 
+}
+div.middle-circle {
+ 
+    /* This margin is used to create
+    the 1px border between the middle
+    and outer circle */
+ 
+    margin:1px;
+ 
+    /* Set the width and height */
+ 
+    width:122px;
+    height:122px;
+ 
+    /* Set the border radius to half
+    the width and height to make it
+    look like a circle */
+ 
+    -webkit-border-radius: 61px;
+    -moz-border-radius: 61px;
+    border-radius: 61px;
+ 
+    /* Set the background gradient */
+ 
+    background: #ececec; /* Old browsers */
+    background: -moz-linear-gradient(top, #ececec 0%, #d8d8d8 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ececec), color-stop(100%,#d8d8d8)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #ececec 0%,#d8d8d8 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #ececec 0%,#d8d8d8 100%); /* Opera11.10+ */
+    background: -ms-linear-gradient(top, #ececec 0%,#d8d8d8 100%); /* IE10+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ececec', endColorstr='#d8d8d8',GradientType=0 ); /* IE6-9 */
+    background: linear-gradient(top, #ececec 0%,#d8d8d8 100%); /* W3C */
+ 
+    /* You will need to use
+    position:absolute so that
+    the circles can appear on top of
+    each other.
+ 
+    Additionally, the z-index will
+    be used to determine which DIV
+    should appear lowest or highest */
+ 
+    position:absolute;
+    z-index:900;
+ 
+    /* Finally, we set the transition so
+    that the circle grows with an
+    animation */
+ 
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+ 
+}
+div.middle-circle.hover {
+    -moz-transform: scale(1.4);
+    -webkit-transform: scale(1.4);
+    transform: scale(1.4);
+}
+div.inner-circle {
+ 
+    /* This margin is used to position
+    the circle in the center */
+ 
+    margin:14px;
+ 
+    /* Specify the background and
+    width and height */
+ 
+    background:#3f96d1;
+    width:96px;
+    height:96px;
+ 
+    /* Since we have text in it,
+    we need to specify the text
+    styles we want to use */
+ 
+    font-size:11px;
+    color:#FFF;
+    line-height:96px;
+    text-align:center;
+    font-family: "微軟正黑體", "Microsoft JhengHei", sans-serif;Arial;
+ 
+    /* Set the border radius to half
+    the width and height to make it
+    look like a circle */
+ 
+    -webkit-border-radius: 48px;
+    -moz-border-radius: 48px;
+    border-radius: 48px;
+ 
+    /* For this circle, we will be using
+    an inset box shadow to replicate
+    the effect used. */
+ 
+    -webkit-box-shadow: inset 0px 1px 1px 0px #575757;
+    -moz-box-shadow: inset 0px 1px 1px 0px #575757;
+    box-shadow: inset 0px 1px 1px 0px #575757;
+ 
+    /* We can also add a bottom border
+    to make it look slightly more 3D */
+ 
+    border-bottom:1px solid #FFF;
+ 
+    /* You will need to use
+    position:absolute so that
+    the circles can appear on top of
+    each other.
+ 
+    Additionally, the z-index will
+    be used to determine which DIV
+    should appear lowest or highest */
+ 
+    position:absolute;
+    z-index:1000;
+ 
+}
+.image {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	display: none;
+}
+
+	body, html {
+		margin:0;
+		padding:0;
+		font-family: "微軟正黑體", "Microsoft JhengHei", sans-serif;arial;
+	}
+	
+	#page_overlay {
+		width:1200px;
+		z-index:2;
+		margin: 0 auto;
+		position: relative;
+        text-align: left;
+	}
+	
+	#page_maintext {
+		margin: 40px 0 40px 0;
+		height: auto;	 
+		width: 930px;
+		float: left;
+	}
+	#page_column {
+		height: 500px;	 
+		width: 218px;
+		float: left;
+		padding:0 20px 0 0;
+	}
+	#page_footer {
+		height: 500px;	 
+		width: 900px;
+		padding:0 20px 0 0;
+		margin: auto;
+	}
+	#page_menubar {
+		margin: 0 0 100px 0;
+		height: 40px;	 
+		width: 1200px;
+		
+	}
+
+	#page_content_menu {
+		font-size:16px;
+		padding:5px;
+		color:#ffffff;
+		margin-top:0px;
+
+		/* Display on top of slideshow */
+		z-index:1001;	
+		position:relative; /* This is very important! */	
+
+	}
+	#page_content {
+		font-size:14px;
+		padding:10px;
+		color:#ffffff;
+		margin-top:0px;
+		float: left;
+		/* Display on top of slideshow */
+		z-index:2;	
+		position:relative; /* This is very important! */
+        line-height:150%;		
+	}
+	#page_content_column {
+		font-size:14px;
+		padding:10px;
+		color:#000000;
+		margin-top:40px;
+		float: left;
+		/* Display on top of slideshow */
+		z-index:2;	
+		position:relative; /* This is very important! */	
+	}
+	img#bg {
+		/* Stretch background */
+		position:fixed;
+		top:0;
+		left:0;
+		height:100%;
+		width:100%;
+		z-index:0;
+	}
+	
+	#bg_grid {
+		position:fixed; /* This is very important! */
+		top:0;
+		left:0;
+		height:100%;
+		width:100%;
+	    background: url(grid.png) repeat;
+			
+		/* Display on top of background */
+		z-index:1;
+	}
+
+	#image_description {
+		position:fixed; /* This is very important! */
+		right:-150px;
+		bottom:60px;
+		width:140px;
+		height:38px;
+		background-color:#dddddd;
+		filter:alpha(opacity=80);
+		-moz-opacity:0.8;
+		-khtml-opacity: 0.8;
+		opacity: 0.8;
+		z-index:2;
+		padding:5px;
+		font-size:10px;
+		line-height:12px;
+		color:#333333;
+	}
+	
+	a, a:link, a:visited, a:active {
+		text-decoration:none;
+		color:#000000;
+	}
+	
+	a:hover {
+		text-decoration:underline;
+	}
+	nav ul ul {
+	display: none;
+	}
+
+	nav ul li:hover > ul {
+		display: block;
+	}
+	nav ul {
+	background: #efefef; 
+	background: linear-gradient(top, #efefef 0%, #bbbbbb 100%);  
+	background: -moz-linear-gradient(top, #efefef 0%, #bbbbbb 100%); 
+	background: -webkit-linear-gradient(top, #efefef 0%,#bbbbbb 100%); 
+	box-shadow: 0px 0px 9px rgba(0,0,0,0.15);
+	padding: 0 20px;
+	border-radius: 10px;  
+	list-style: none;
+	position: relative;
+	display: inline-table;
+	}
+	nav ul:after {
+		content: ""; clear: both; display: block;
+	}
+	nav ul li {
+	float: left;
+	}
+	nav ul li:hover {
+		background: #4b545f;
+		background: linear-gradient(top, #4f5964 0%, #5f6975 40%);
+		background: -moz-linear-gradient(top, #4f5964 0%, #5f6975 40%);
+		background: -webkit-linear-gradient(top, #4f5964 0%,#5f6975 40%);
+	}
+		nav ul li:hover a {
+			color: #fff;
+		}
+	
+	nav ul li a {
+		display: block; padding: 25px 40px;
+		color: #757575; text-decoration: none;
+	}
+	nav ul ul {
+	background: #5f6975; border-radius: 0px; padding: 0;
+	position: absolute; top: 100%;
+	}
+	nav ul ul li {
+		float: none; 
+		border-top: 1px solid #6b727c;
+		border-bottom: 1px solid #575f6a;
+		position: relative;
+	}
+		nav ul ul li a {
+			padding: 15px 40px;
+			color: #fff;
+		}	
+			nav ul ul li a:hover {
+				background: #4b545f;
+			}
+    .blue{
+	color: #0000aa;
+	}
+	
+	.green{
+	color: #00aa00;
+	}
+	
+	.red{
+	color: #aa0000;
+	}
+	
+footer {
+ background-color:#ffffff;
+ position: relative;
+ margin-top: -50x; /* negative value of footer height */
+ height: 100px;
+ clear:both;
+ z-index:1001;
+}
+
+fieldset {
+	border:0;
+	padding:10px;
+	line-height:150%;
+	margin-bottom:
+	10px;background:#EEE;
+
+	border-radius: 8px;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+
+	background:-webkit-liner-gradient(top,#EEEEEE,#FFFFFF);
+	background:linear-gradient(top,#EFEFEF,#FFFFFF);
+
+	box-shadow:3px 3px 10px #666;
+	-moz-box-shadow:3px 3px 10px #666;
+	-webkit-box-shadow:3px 3px 10px #666;
+
+	position:relative;
+	}
+
+legend {
+	padding:5px 10px;
+	background-color:#4F709F;
+	color:#FFF;
+
+	border-radius:3px;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+
+	box-shadow:2px 2px 4px #666;
+	-moz-box-shadow:2px 2px 4px #666;
+	-webkit-box-shadow:2px 2px 4px #666;
+
+	position:absolute;
+	left:10px;top:-11px;
+	}

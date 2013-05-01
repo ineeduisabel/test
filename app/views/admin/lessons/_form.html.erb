@@ -1,0 +1,54 @@
+<%= form_for(@lesson) do |f| %>
+  <% if @lesson.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@lesson.errors.count, "error") %> prohibited this lesson from being saved:</h2>
+
+      <ul>
+      <% @lesson.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+  <div class="field">
+    <%= f.label :課程名稱 %><br />
+    <%= f.text_field :title %>
+  </div>
+    <div class="field">
+    <%= f.label :課程分類 %><br />
+    <%= f.select :lessoncate_id, Lessoncate.all.map{ |c| [c.name, c.id] } %>
+  </div>
+     <div class="field">
+    <%= f.label :講師 %><br />
+    <%= f.select :consultant_id, Consultant.all.map{ |c| [c.name, c.id] } %>
+  </div>
+  <div class="field">
+    <%= f.label :課程簡述 %><br />
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :課程內容 %><br />
+    <%= f.text_area :content %>
+  </div>
+  <div class="field">
+    <%= f.label :報名時間 %><br />
+    <%= f.date_select :singtime %>
+  </div>
+  <div class="field">
+    <%= f.label :上課時間 %><br />
+    <%= f.date_select :classtime %>
+  </div>
+  <div class="field">
+    <%= f.label :上課地點 %><br />
+    <%= f.text_field :place %>
+  </div>
+  <div class="field">
+    <%= f.label :課程時數 %><br />
+    <%= f.text_field :lessonhour %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

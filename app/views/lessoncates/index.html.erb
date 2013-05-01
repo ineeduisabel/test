@@ -1,0 +1,27 @@
+<h2>分類瀏覽</h2>
+<div class="block">
+
+	<table class="data display datatable" id="example">
+		<thead>
+			<tr>
+				<th>分類名稱</th>
+				<th></th>
+				<th></th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			<% @lessoncates.each do |lessoncate| %>
+			<tr class="odd gradeX">
+				<td align="center"><%= lessoncate.name %></td>
+
+    <td><%= link_to '查看', lessoncate %></td>
+    <td><%= link_to '編輯', edit_lessoncate_path(lessoncate) %></td>
+    <td><%= link_to '刪除', lessoncate, method: :delete, data: { confirm: '你確定嗎?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to '創建新分類', new_lessoncate_path %>

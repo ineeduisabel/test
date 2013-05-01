@@ -1,0 +1,51 @@
+<div class="grid_12 header-repeat">
+	<div id="branding">
+		<div class="floatleft">
+			<%= image_tag("logo.png")%>
+		</div>
+		<div class="floatright">
+			<div class="floatleft">
+				<%= image_tag("admin/img-profile.jpg")%>
+			</div>
+			<div class="floatleft marginleft10">
+				<ul class="inline-ul floatleft">
+					<li>
+						<% if user_signed_in? %>
+	                    HI <%= current_user.email%>
+					</li>
+					<li>
+						<% if current_user && current_user.is_admin? %>
+	                    <%= link_to("瀏覽前台", lessons_path, :target => '_blank')%>
+	                    <%end%>
+					</li>
+					<li>
+						<%= link_to("登出", destroy_user_session_path, :method => :delete)%>
+						<% end %>
+					</li>
+				</ul>
+				<br />
+				<span class="small grey">Last Login: not support</span>
+			</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</div>
+<div class="clear"></div>
+<div class="grid_12">
+	<ul class="nav main">
+		<li class="ic-dashboard">
+			<a href="/topadmin"><span>首頁</span></a>
+		</li>
+		<li class="ic-grid-tables">
+			<a href="javascript:"><span>分析資料</span></a>
+			
+		</li>
+		<li class="ic-form-style">
+			<a href="typography.html"><span>課程系統</span></a>
+		</li>
+		<li class="ic-notifications">
+			<a href="http://playplus.com.tw/"><span>聯絡Playplus</span></a>
+		</li>
+		
+	</ul>
+</div>

@@ -1,0 +1,23 @@
+<%= form_for(@lessoncate) do |f| %>
+  <% if @lessoncate.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@lessoncate.errors.count, "error") %> prohibited this lessoncate from being saved:</h2>
+
+      <ul>
+      <% @lessoncate.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+  <div class="field">
+    <%= f.label :課程分類名稱 %><br />
+    <%= f.text_field :name%>
+  </div>
+  
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
